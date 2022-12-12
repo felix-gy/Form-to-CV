@@ -4,8 +4,8 @@
              x:Class="Form_to_CV.MyCV">
     <ContentPage.Content>
         <StackLayout>
-            <ScrollView>
-                <StackLayout Margin="20">
+            <ScrollView >
+                <StackLayout Margin="20" x:Name="CV_Content">
                     <StackLayout BackgroundColor="#05668d">
                         <Label x:Name="name" 
                            HorizontalTextAlignment="Center" 
@@ -40,6 +40,7 @@
                            HorizontalTextAlignment="Center"/>
                 </StackLayout>
             </ScrollView>
+            <Button Text="Generar PDF" Clicked="Button_Clicked_GeneratePDF"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
