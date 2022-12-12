@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Form_to_CV.MyCV">
+    <ContentPage.Content>
+        <StackLayout>
+            <ScrollView>
+                <StackLayout Margin="20">
+                    <StackLayout BackgroundColor="#05668d">
+                        <Label x:Name="name" 
+                           HorizontalTextAlignment="Center" 
+                           TextColor="White"
+                           FontSize="Large"
+                           Padding="30"/>
+                    </StackLayout>
+
+                    <Label Text="Contac:"
+                           TextColor="#05668d"/>
+                    <Label x:Name="contact"
+                           HorizontalTextAlignment="Center" />
+
+                    <Label Text="Age:"
+                           TextColor="#05668d"/>
+                    <Label x:Name="age"
+                           HorizontalTextAlignment="Center"/>
+
+                    <Label Text="Occupation:"
+                           TextColor="#05668d"/>
+                    <Label x:Name="occupation"
+                           HorizontalTextAlignment="Center"/>
+
+                    <Label Text="Skills:"
+                           TextColor="#05668d"/>
+                    <Label x:Name="skill"
+                           HorizontalTextAlignment="Center"/>
+
+                    <Label Text="Education:"
+                           TextColor="#05668d"/>
+                    <Label x:Name="education" 
+                           HorizontalTextAlignment="Center"/>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

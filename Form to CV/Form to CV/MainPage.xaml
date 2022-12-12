@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Form_to_CV.MainPage">
+
+    <StackLayout Margin="20">
+        <Label Text="CV Generator" 
+               FontSize="Large"
+               TextColor="#05668d"
+               HorizontalTextAlignment="Center"/>
+        <ScrollView>
+            <StackLayout>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.35*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                    <Label Text="Name:"
+                           TextColor="#02c39a"
+                           Grid.Row="0"
+                           Grid.Column="0"
+                           FontSize="Medium"
+                           VerticalTextAlignment="Center"/>
+                    <Entry Placeholder="Enter your name"
+                           Grid.Row="0"
+                           Grid.Column="1"
+                           FontSize="Medium"
+                           x:Name="EntryName"/>
+
+                    <Label Text="Age:"
+                           TextColor="#02c39a"
+                           Grid.Row="1"
+                           Grid.Column="0"
+                           FontSize="Medium"
+                           VerticalTextAlignment="Center"/>
+                    <Entry Placeholder="Enter your age"
+                           Grid.Row="1"
+                           FontSize="Medium"
+                           Grid.Column="1"
+                           x:Name="EntryAge"/>
+
+                    <Label Text="Contact:"
+                           TextColor="#02c39a"
+                           Grid.Row="2"
+                           FontSize="Medium"
+                           VerticalTextAlignment="Center"/>
+                    <Entry Placeholder="Enter your contact"
+                           Grid.Row="2"
+                           Grid.Column="1"
+                           FontSize="Medium"
+                           x:Name="EntryContact"/>
+
+                </Grid>
+
+                <StackLayout x:Name="ocupation">
+                    <Label Text="Occupation:"
+                           TextColor="#02c39a"
+                           FontSize="Medium"/>
+                    <Entry Placeholder="Enter your occupation"
+                           FontSize="Medium"
+                           x:Name="EntryOccupation"/>
+                </StackLayout>
+                <Button Text="+"
+                        Clicked="Button_Clicked_Ocupation"/>
+
+                <StackLayout x:Name="skill">
+                    <Label Text="Skills:"
+                           TextColor="#02c39a"
+                           FontSize="Medium"/>
+                    <Entry Placeholder="Enter your skill"
+                           FontSize="Medium"
+                           x:Name="EntrySkill"/>
+                </StackLayout>
+                <Button Text="+"
+                        Clicked="Button_Clicked_Skill"/>
+
+                <StackLayout x:Name="education">
+                    <Label Text="Education:"
+                           TextColor="#02c39a"
+                           FontSize="Medium"/>
+                    <Entry Placeholder="Enter your education"
+                           FontSize="Medium"
+                           x:Name="EntryEducation"/>
+                </StackLayout>
+                <Button Text="+"
+                        Clicked="Button_Clicked_Education"/>
+
+
+                <Button Text="Submit"  
+                BackgroundColor="#02c39a"
+                TextColor="White"
+                Clicked="Button_Clicked"
+                FontSize="Medium"/>
+            </StackLayout>
+
+
+
+        </ScrollView>
+    </StackLayout>
+    
+</ContentPage>
