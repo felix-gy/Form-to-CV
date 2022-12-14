@@ -19,21 +19,22 @@
                     </Grid.ColumnDefinitions>
                     <BoxView BackgroundColor="#02c39a"
                          Grid.ColumnSpan="2"/>
-
-                    <StackLayout  VerticalOptions="Center" 
-                                  HorizontalOptions="Center" 
-                                  Grid.ColumnSpan="2">
-                        <Label Text="Felix Gordillo Yucra"
+                    
+                    <!--Header-->
+                    <StackLayout  Grid.ColumnSpan="2"
+                                  VerticalOptions="Center">
+                        <Label x:Name="LabelName"
                                FontSize="30"
                                TextColor="White"
-                               FontAttributes="Bold"/>
-                        <Label Text="Programador"
+                               FontAttributes="Bold"
+                               HorizontalTextAlignment="Center"/>
+                        <Label x:Name="LabelOccupation"
                                FontSize="Medium"
-                               HorizontalOptions="Center"/>
+                               HorizontalOptions="Center"
+                               HorizontalTextAlignment="Center"/>
                     </StackLayout>
 
-
-
+                    <!--Body-->
                     <StackLayout Grid.Row="1" Margin="20">
                         <Label Text="Contact:"
                                TextColor="White"
@@ -41,30 +42,29 @@
                                BackgroundColor="#02c39a"
                                Padding="1"/>
                         <StackLayout>
-                            <Label Text="988434343"/>
-                            <Label Text="gordillo@sadfasdf.com"/>
+                            <Label x:Name="LabelNumber"/>
+                            <Label x:Name="LabelEmail"/>
                         </StackLayout>
 
-                        <Label Text="Nacionality:"
+                        <Label Text="Nationality:"
                                TextColor="White"
                                FontAttributes="Italic"
                                BackgroundColor="#02c39a"
                                Padding="1"/>
                         <StackLayout>
-                            <Label Text="Peru"/>
+                            <Label x:Name="LabelNationality"/>
                         </StackLayout>
 
-                        <Label Text="Edad:"
+                        <Label Text="Age:"
                                TextColor="White"
                                FontAttributes="Italic"
                                BackgroundColor="#02c39a"
                                Padding="1"/>
                         <StackLayout>
-                            <Label Text="18"/>
+                            <Label x:Name="LabelAge"/>
                         </StackLayout>
-
                     </StackLayout>
-
+                    
                     <StackLayout Grid.Row="1"
                                  Grid.Column="1">
                         <Label Text="Skills"
@@ -73,10 +73,8 @@
                                BackgroundColor="#02c39a"
                                Padding="1" 
                                Margin="20,20,20,0"/>
-                        <StackLayout HorizontalOptions="Center">
-                            <Label Text="bailñar"/>
-                            <Label Text="comer"/>
-                            <Label Text="correr"/>
+                        <StackLayout x:Name="StackSkill"
+                                     HorizontalOptions="Center">
                         </StackLayout>
                     </StackLayout>
 
@@ -89,11 +87,8 @@
                                Padding="1" 
                                Margin="20"
                                BackgroundColor="#02c39a"/>
-
-                        <StackLayout>
-                            <Label Text="sdfgsdfgsdfgdsfgsdfgdsfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfg"/>
-                        </StackLayout>
-
+                        <StackLayout x:Name="StackEducation"></StackLayout>
+                        
                         <Label Text="Work Experience"
                                TextColor="White"
                                FontAttributes="Bold"
@@ -101,15 +96,18 @@
                                Padding="1" 
                                Margin="20"
                                BackgroundColor="#02c39a"/>
-
-                        <StackLayout>
-                            <Label Text="sdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfg"/>
-
-                        </StackLayout>
+                        <StackLayout x:Name="StackExp"></StackLayout>
                     </StackLayout>
                 </Grid>
             </ScrollView>
-            <Button Text="Generar PDF" Clicked="Button_Clicked_GeneratePDF"/>
+            <Button Text="Save by Email " 
+                    Clicked="Button_Clicked_GeneratePDF"
+                    FontSize="Medium"
+                    BackgroundColor="#f0f3bd"
+                    TextColor="#02c39a"
+                    BorderColor="#02c39a"
+                    BorderWidth="1"
+                    Margin="20"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

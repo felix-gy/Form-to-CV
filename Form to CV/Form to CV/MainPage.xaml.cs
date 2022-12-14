@@ -43,7 +43,7 @@ namespace Form_to_CV
             // Education
             List<String> edu_list = new List<String>();
 
-            var eduList = Layout_skill.Children.ToList();
+            var eduList = Layout_education.Children.ToList();
 
             foreach (var i in eduList)
             {
@@ -53,6 +53,8 @@ namespace Form_to_CV
 
             string name = EntryName.Text;
             string age = EntryAge.Text;
+            string ocup = EntryOccupation.Text;
+            string nat = EntryNationality.Text;
             string number = EntryNumber.Text;
             string email = EntryEmail.Text;
             /*
@@ -60,7 +62,7 @@ namespace Form_to_CV
             string skill = EntrySkill.Text;
             string education = EntryEducation.Text;
             */
-            Application.Current.MainPage.Navigation.PushModalAsync(new MyCV(name, age, number, email, exp_list, skill_list, edu_list), true);
+            Application.Current.MainPage.Navigation.PushModalAsync(new MyCV(name, age, ocup, nat, number, email, exp_list, skill_list, edu_list), true);
         }
 
         private void Button_Clicked_Experience(object sender, EventArgs e)
@@ -76,7 +78,7 @@ namespace Form_to_CV
         }
         private void Button_Clicked_Education(object sender, EventArgs e)
         {
-            var entry = new Entry() { Placeholder = "Enter your Education" };
+            var entry = new Entry() { Placeholder = "Enter your education" };
             Layout_education.Children.Add(entry);
         }
     }

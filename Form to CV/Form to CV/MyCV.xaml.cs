@@ -16,30 +16,34 @@ namespace Form_to_CV
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MyCV : ContentPage
     {
-        public MyCV(string Name, string Age, string Number,string Email, List<String> Experience, List<String> Skill, List<String> Edu)
+        public MyCV(string Name, string Age, string Occupation, string Nationality,string Number,string Email, List<String> Experience, List<String> Skill, List<String> Edu)
         {
             InitializeComponent();
-            
-            //name.Text = Name;
-            //age.Text = Age;
-            //number.Text = Number;
+
+            LabelName.Text = Name;
+            LabelAge.Text = Age;
+            LabelOccupation.Text = Occupation;
+            LabelNationality.Text = Nationality;
+            LabelNumber.Text = Number;
+            LabelEmail.Text = Email;
 
             foreach(var i in Experience)
             {
                 var label = new Label { Text = i };
+                StackExp.Children.Add(label);
             }
 
             foreach (var i in Skill)
             {
                 var label = new Label { Text = i };
-
+                StackSkill.Children.Add(label);
             }
 
             foreach (var i in Edu)
             {
                 var label = new Label { Text = i };
+                StackEducation.Children.Add(label);
             }
-
 
         }
 
@@ -50,22 +54,13 @@ namespace Form_to_CV
             var pdf = PDFManager.GeneratePDFFromView(CV_Content);
 
             //Nombre con el que se guardara el pdf
-            string filename = "myCV.pdf";
+            string filename = "MyCV.pdf";
 
             //Direccion donde se guardara
             string path = System.IO.Path.Combine(FileSystem.CacheDirectory, filename);
 
            //Guardando lo que convertimos en la direccion(path)
             pdf.Save(path);
-
-
-            //var mensaje = new EmailMessage("My CV", "", "gordilloyucra@gmail.com");
-            //await Email.ComposeAsync(mensaje);
-            //pdf.Save(FileSystem.CacheDirectory);
-            //MemoryStream pdfStream = new MemoryStream();
-            //pdf.Save(pdfStream);
-            //File.WriteAllText(file, "Hello World");
-
 
 
             var message = new EmailMessage
