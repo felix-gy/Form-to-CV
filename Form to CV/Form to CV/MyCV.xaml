@@ -5,22 +5,108 @@
     <ContentPage.Content>
         <StackLayout>
             <ScrollView >
-                <Grid x:Name="CV_Content">
+                <Grid x:Name="CV_Content"
+                      ColumnSpacing="0"
+                      RowSpacing="0">
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="180" />
+                        <RowDefinition Height="130"/>
                         <RowDefinition Height="auto" />
+                        <RowDefinition Height="500" />
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="5*"/>
                         <ColumnDefinition Width="5*"/>
                     </Grid.ColumnDefinitions>
-                    <BoxView Color="AliceBlue"/>
-                    <BoxView Color="Gray"
-                     Grid.Row="1"
-                     Grid.ColumnSpan="2"/>
-                    <BoxView Color="Gold"
-                             Grid.Column="1"/>
+                    <BoxView BackgroundColor="#02c39a"
+                         Grid.ColumnSpan="2"/>
 
+                    <StackLayout  VerticalOptions="Center" 
+                                  HorizontalOptions="Center" 
+                                  Grid.ColumnSpan="2">
+                        <Label Text="Felix Gordillo Yucra"
+                               FontSize="30"
+                               TextColor="White"
+                               FontAttributes="Bold"/>
+                        <Label Text="Programador"
+                               FontSize="Medium"
+                               HorizontalOptions="Center"/>
+                    </StackLayout>
+
+
+
+                    <StackLayout Grid.Row="1" Margin="20">
+                        <Label Text="Contact:"
+                               TextColor="White"
+                               FontAttributes="Italic"
+                               BackgroundColor="#02c39a"
+                               Padding="1"/>
+                        <StackLayout>
+                            <Label Text="988434343"/>
+                            <Label Text="gordillo@sadfasdf.com"/>
+                        </StackLayout>
+
+                        <Label Text="Nacionality:"
+                               TextColor="White"
+                               FontAttributes="Italic"
+                               BackgroundColor="#02c39a"
+                               Padding="1"/>
+                        <StackLayout>
+                            <Label Text="Peru"/>
+                        </StackLayout>
+
+                        <Label Text="Edad:"
+                               TextColor="White"
+                               FontAttributes="Italic"
+                               BackgroundColor="#02c39a"
+                               Padding="1"/>
+                        <StackLayout>
+                            <Label Text="18"/>
+                        </StackLayout>
+
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="1"
+                                 Grid.Column="1">
+                        <Label Text="Skills"
+                               TextColor="White"
+                               FontAttributes="Bold"
+                               BackgroundColor="#02c39a"
+                               Padding="1" 
+                               Margin="20,20,20,0"/>
+                        <StackLayout HorizontalOptions="Center">
+                            <Label Text="bailñar"/>
+                            <Label Text="comer"/>
+                            <Label Text="correr"/>
+                        </StackLayout>
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="2"
+                                 Grid.ColumnSpan="2">
+                        <Label Text="Education"
+                               TextColor="White"
+                               FontAttributes="Bold"
+                               HorizontalTextAlignment="Center"
+                               Padding="1" 
+                               Margin="20"
+                               BackgroundColor="#02c39a"/>
+
+                        <StackLayout>
+                            <Label Text="sdfgsdfgsdfgdsfgsdfgdsfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfg"/>
+                        </StackLayout>
+
+                        <Label Text="Work Experience"
+                               TextColor="White"
+                               FontAttributes="Bold"
+                               HorizontalTextAlignment="Center"
+                               Padding="1" 
+                               Margin="20"
+                               BackgroundColor="#02c39a"/>
+
+                        <StackLayout>
+                            <Label Text="sdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfg"/>
+
+                        </StackLayout>
+                    </StackLayout>
                 </Grid>
             </ScrollView>
             <Button Text="Generar PDF" Clicked="Button_Clicked_GeneratePDF"/>
