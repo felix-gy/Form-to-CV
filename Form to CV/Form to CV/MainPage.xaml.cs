@@ -18,30 +18,66 @@ namespace Form_to_CV
 
         private void Button_Clicked(object sender, EventArgs e)
         {
+            // Experience 
+            List<String> exp_list = new List<String>();
+
+            var expList = Layout_experience.Children.ToList();
+
+            foreach (var i in expList)
+            {
+                var myEntry = i as Entry;
+                exp_list.Add(myEntry.Text);
+            }
+
+            // Skills
+            List<String> skill_list = new List<String>();
+
+            var skillsList = Layout_skill.Children.ToList();
+
+            foreach (var i in skillsList)
+            {
+                var myEntry = i as Entry;
+                skill_list.Add(myEntry.Text);
+            }
+
+            // Education
+            List<String> edu_list = new List<String>();
+
+            var eduList = Layout_skill.Children.ToList();
+
+            foreach (var i in eduList)
+            {
+                var myEntry = i as Entry;
+                edu_list.Add(myEntry.Text);
+            }
+
             string name = EntryName.Text;
             string age = EntryAge.Text;
-            string contact = EntryContact.Text;
-            string occupation = EntryOccupation.Text;
+            string number = EntryNumber.Text;
+            string email = EntryEmail.Text;
+            /*
+            string experience = EntryExperience.Text;
             string skill = EntrySkill.Text;
             string education = EntryEducation.Text;
-            Application.Current.MainPage.Navigation.PushModalAsync(new MyCV(name, age, contact, occupation, skill, education), true);
+            */
+            Application.Current.MainPage.Navigation.PushModalAsync(new MyCV(name, age, number, email, exp_list, skill_list, edu_list), true);
         }
 
-        private void Button_Clicked_Ocupation(object sender, EventArgs e)
+        private void Button_Clicked_Experience(object sender, EventArgs e)
         {
-            var entry = new Entry() { Placeholder = "Enter your occupation" };
-            ocupation.Children.Add(entry);
+            var entry = new Entry() { Placeholder = "Enter your experience" };
+            Layout_experience.Children.Add(entry);
 
         }
         private void Button_Clicked_Skill(object sender, EventArgs e)
         {
             var entry = new Entry() { Placeholder = "Enter your skill" };
-            skill.Children.Add(entry);
+            Layout_skill.Children.Add(entry);
         }
         private void Button_Clicked_Education(object sender, EventArgs e)
         {
             var entry = new Entry() { Placeholder = "Enter your Education" };
-            education.Children.Add(entry);
+            Layout_education.Children.Add(entry);
         }
     }
 }

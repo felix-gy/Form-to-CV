@@ -4,87 +4,57 @@
              x:Class="Form_to_CV.MainPage">
 
     <StackLayout Margin="20">
-        <Label Text="CV Generator" 
+        <Label Text="Form to CV" 
                FontSize="Large"
                TextColor="#05668d"
                HorizontalTextAlignment="Center"/>
         <ScrollView>
             <StackLayout>
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="0.35*"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="auto"/>
-                        <RowDefinition Height="auto"/>
-                        <RowDefinition Height="auto"/>
-                    </Grid.RowDefinitions>
-                    <Label Text="Name:"
-                           TextColor="#02c39a"
-                           Grid.Row="0"
-                           Grid.Column="0"
-                           FontSize="Medium"
-                           VerticalTextAlignment="Center"/>
-                    <Entry Placeholder="Enter your name"
-                           Grid.Row="0"
-                           Grid.Column="1"
-                           FontSize="Medium"
+                
+                <Label Text="Name:"
+                           TextColor="#02c39a"/>
+                <Entry Placeholder="Enter your name"
                            x:Name="EntryName"/>
-
-                    <Label Text="Age:"
-                           TextColor="#02c39a"
-                           Grid.Row="1"
-                           Grid.Column="0"
-                           FontSize="Medium"
-                           VerticalTextAlignment="Center"/>
-                    <Entry Placeholder="Enter your age"
-                           Grid.Row="1"
-                           FontSize="Medium"
-                           Grid.Column="1"
+                
+                <Label Text="Age:"
+                           TextColor="#02c39a"/>
+                <Entry Placeholder="Enter your age"
                            x:Name="EntryAge"/>
-
-                    <Label Text="Contact:"
-                           TextColor="#02c39a"
-                           Grid.Row="2"
-                           FontSize="Medium"
-                           VerticalTextAlignment="Center"/>
-                    <Entry Placeholder="Enter your contact"
-                           Grid.Row="2"
-                           Grid.Column="1"
-                           FontSize="Medium"
+                
+                <Label Text="Occupation:"
+                           TextColor="#02c39a"/>
+                <Entry Placeholder="Enter your Occupation"
                            x:Name="EntryContact"/>
 
-                </Grid>
+                <Label Text="Contact:"
+                       TextColor="#02c39a"/>
+                <Entry Placeholder="Enter your phone number"
+                           x:Name="EntryNumber"/>
+                <Entry Placeholder="Enter your email"
+                           x:Name="EntryEmail"/>
 
-                <StackLayout x:Name="ocupation">
-                    <Label Text="Occupation:"
-                           TextColor="#02c39a"
-                           FontSize="Medium"/>
-                    <Entry Placeholder="Enter your occupation"
-                           FontSize="Medium"
-                           x:Name="EntryOccupation"/>
+                <Label Text="Work Experience:"
+                           TextColor="#02c39a"/>
+                <StackLayout x:Name="Layout_experience">
+                    <Entry Placeholder="Enter your experience"
+                           x:Name="EntryExperience"/>
                 </StackLayout>
                 <Button Text="+"
-                        Clicked="Button_Clicked_Ocupation"/>
+                        Clicked="Button_Clicked_Experience"/>
 
-                <StackLayout x:Name="skill">
-                    <Label Text="Skills:"
-                           TextColor="#02c39a"
-                           FontSize="Medium"/>
+                <Label Text="Skills:"
+                           TextColor="#02c39a"/>
+                <StackLayout x:Name="Layout_skill">
                     <Entry Placeholder="Enter your skill"
-                           FontSize="Medium"
                            x:Name="EntrySkill"/>
                 </StackLayout>
                 <Button Text="+"
                         Clicked="Button_Clicked_Skill"/>
 
-                <StackLayout x:Name="education">
-                    <Label Text="Education:"
-                           TextColor="#02c39a"
-                           FontSize="Medium"/>
+                <Label Text="Education:"
+                           TextColor="#02c39a"/>
+                <StackLayout x:Name="Layout_education">
                     <Entry Placeholder="Enter your education"
-                           FontSize="Medium"
                            x:Name="EntryEducation"/>
                 </StackLayout>
                 <Button Text="+"

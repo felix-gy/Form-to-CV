@@ -5,40 +5,23 @@
     <ContentPage.Content>
         <StackLayout>
             <ScrollView >
-                <StackLayout Margin="20" x:Name="CV_Content">
-                    <StackLayout BackgroundColor="#05668d">
-                        <Label x:Name="name" 
-                           HorizontalTextAlignment="Center" 
-                           TextColor="White"
-                           FontSize="Large"
-                           Padding="30"/>
-                    </StackLayout>
+                <Grid x:Name="CV_Content">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="180" />
+                        <RowDefinition Height="auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="5*"/>
+                        <ColumnDefinition Width="5*"/>
+                    </Grid.ColumnDefinitions>
+                    <BoxView Color="AliceBlue"/>
+                    <BoxView Color="Gray"
+                     Grid.Row="1"
+                     Grid.ColumnSpan="2"/>
+                    <BoxView Color="Gold"
+                             Grid.Column="1"/>
 
-                    <Label Text="Contac:"
-                           TextColor="#05668d"/>
-                    <Label x:Name="contact"
-                           HorizontalTextAlignment="Center" />
-
-                    <Label Text="Age:"
-                           TextColor="#05668d"/>
-                    <Label x:Name="age"
-                           HorizontalTextAlignment="Center"/>
-
-                    <Label Text="Occupation:"
-                           TextColor="#05668d"/>
-                    <Label x:Name="occupation"
-                           HorizontalTextAlignment="Center"/>
-
-                    <Label Text="Skills:"
-                           TextColor="#05668d"/>
-                    <Label x:Name="skill"
-                           HorizontalTextAlignment="Center"/>
-
-                    <Label Text="Education:"
-                           TextColor="#05668d"/>
-                    <Label x:Name="education" 
-                           HorizontalTextAlignment="Center"/>
-                </StackLayout>
+                </Grid>
             </ScrollView>
             <Button Text="Generar PDF" Clicked="Button_Clicked_GeneratePDF"/>
         </StackLayout>
