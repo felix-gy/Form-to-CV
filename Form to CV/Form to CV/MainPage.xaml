@@ -6,44 +6,44 @@
     <StackLayout Margin="20">
         <StackLayout BackgroundColor="#05668d">
             <Label Text="Form to CV" 
-               FontSize="Large"
-               TextColor="White"
-               HorizontalTextAlignment="Center"
+                   FontSize="Large"
+                   TextColor="White"
+                   HorizontalTextAlignment="Center"
                    Padding="6"/>
         </StackLayout>
         <ScrollView>
             <StackLayout>
-                
+
                 <Label Text="Name:"
-                           TextColor="#02c39a"/>
+                       TextColor="#02c39a"/>
                 <Entry Placeholder="Enter your name"
-                           x:Name="EntryName"/>
-                
+                       x:Name="EntryName"/>
+
                 <Label Text="Age:"
-                           TextColor="#02c39a"/>
+                       TextColor="#02c39a"/>
                 <Entry Placeholder="Enter your age"
-                           x:Name="EntryAge"/>
-                
+                       x:Name="EntryAge"/>
+
                 <Label Text="Occupation:"
-                           TextColor="#02c39a"/>
+                       TextColor="#02c39a"/>
                 <Entry Placeholder="Enter your occupation"
-                           x:Name="EntryOccupation"/>
+                       x:Name="EntryOccupation"/>
 
                 <Label Text="Nationality:"
-                           TextColor="#02c39a"/>
+                       TextColor="#02c39a"/>
                 <Entry Placeholder="Enter your country"
-                           x:Name="EntryNationality"/>
-                
+                       x:Name="EntryNationality"/>
+
                 <Label Text="Contact:"
                        TextColor="#02c39a"/>
                 <Entry Placeholder="Enter your phone number"
-                           x:Name="EntryNumber"/>
+                       x:Name="EntryNumber"/>
                 <Entry Placeholder="Enter your email"
-                           x:Name="EntryEmail"/>
-                
+                       x:Name="EntryEmail"/>
+
 
                 <Label Text="Work Experience:"
-                           TextColor="#02c39a"/>
+                       TextColor="#02c39a"/>
                 <StackLayout x:Name="Layout_experience">
                     <Entry Placeholder="Enter your experience"
                            x:Name="EntryExperience"/>
@@ -52,7 +52,7 @@
                         Clicked="Button_Clicked_Experience"/>
 
                 <Label Text="Skills:"
-                           TextColor="#02c39a"/>
+                       TextColor="#02c39a"/>
                 <StackLayout x:Name="Layout_skill">
                     <Entry Placeholder="Enter your skill"
                            x:Name="EntrySkill"/>
@@ -61,7 +61,7 @@
                         Clicked="Button_Clicked_Skill"/>
 
                 <Label Text="Education:"
-                           TextColor="#02c39a"/>
+                       TextColor="#02c39a"/>
                 <StackLayout x:Name="Layout_education">
                     <Entry Placeholder="Enter your education"
                            x:Name="EntryEducation"/>
@@ -71,14 +71,11 @@
 
 
                 <Button Text="Submit"  
-                BackgroundColor="#02c39a"
-                TextColor="#f0f3bd"
-                Clicked="Button_Clicked"
-                FontSize="Medium"/>
+                        BackgroundColor="#02c39a"
+                        TextColor="#f0f3bd"
+                        Clicked="Button_Clicked"
+                        FontSize="Medium"/>
             </StackLayout>
-
-
-
         </ScrollView>
     </StackLayout>
     

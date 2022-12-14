@@ -57,11 +57,7 @@ namespace Form_to_CV
             string nat = EntryNationality.Text;
             string number = EntryNumber.Text;
             string email = EntryEmail.Text;
-            /*
-            string experience = EntryExperience.Text;
-            string skill = EntrySkill.Text;
-            string education = EntryEducation.Text;
-            */
+
             Application.Current.MainPage.Navigation.PushModalAsync(new MyCV(name, age, ocup, nat, number, email, exp_list, skill_list, edu_list), true);
         }
 
