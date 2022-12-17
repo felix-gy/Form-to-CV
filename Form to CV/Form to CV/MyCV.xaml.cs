@@ -50,19 +50,16 @@ namespace Form_to_CV
 
         private async void Button_Clicked_GeneratePDF(object sender, EventArgs e)
         {
-            // Convertimos nuestro GRID en PDF 
+            // Convertimos nuestro el contenido del cv en Pdf 
             var pdf = PDFManager.GeneratePDFFromView(CV_Content);
-
-            //Nombre con el que se guardara el pdf
             string filename = "MyCV.pdf";
 
-            //Direccion donde se guardara
             string path = System.IO.Path.Combine(FileSystem.CacheDirectory, filename);
 
            //Guardando lo que convertimos en la direccion(path)
             pdf.Save(path);
-
-
+            
+            //Emportar mediante mensaje de Email
             var message = new EmailMessage
             {
                 Subject = "",
