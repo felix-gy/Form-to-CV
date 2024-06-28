@@ -48,7 +48,3 @@ This project is licensed under the MIT License.
 ## Acknowledgements
 - Thanks to the developers of **PdfSharpCore** and **PdfSharp.Xamarin.Forms** for their open-source libraries.
 - Special mention to the Xamarin.Forms community for their extensive documentation and support.
-
----
-
-Feel free to replace placeholders such as `yourusername` with your actual GitHub username or any specific details relevant to your project.
