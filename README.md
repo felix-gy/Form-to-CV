@@ -28,7 +28,7 @@ This project demonstrates:
 ### Installation
 1. Clone the repository:
    ```sh
-   git clone https://github.com/yourusername/FormToCVApp.git
+   git clone https://github.com/felix-gy/Form-to-CV.git
    ```
 2. Open the solution in Visual Studio.
 3. Restore the necessary NuGet packages.
